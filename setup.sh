@@ -1,4 +1,7 @@
-docker build -t gautam191/python_img:v1 .
+#!/bin/bash
+
+jupyter_password=password  # you can change it
+
 docker-compose up -d
-docker exec $(docker-compose ps -q) python3 pass.py password
+docker exec $(docker-compose ps -q) python3 pass.py $jupyter_password
 docker-compose restart
