@@ -1,0 +1,17 @@
+version: '3'
+
+services: 
+  myos:
+    image: gautam191/python_img:v1
+    network_mode: host
+    environment:
+      jupyter_password: redhat
+    volumes:
+      - python_workdir:/workstaion/
+      - python_lib:/usr/local/lib/
+    restart: on-failure
+
+volumes:
+  python_workdir:
+  python_lib:
+                  
