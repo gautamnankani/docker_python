@@ -12,7 +12,7 @@ STEPS:
 
 2) go to the folder
 
-#To build the image(RWQUIREMENT: INTERNET)
+#To build the image(REQUIREMENT: INTERNET)
 
 3) bash build.sh
 
