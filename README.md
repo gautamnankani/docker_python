@@ -19,13 +19,13 @@ STEPS:
 
 3) bash build.sh
 
-###############################################################
-
-
 EITHER FOLLOW (4,5)  OR  (6,7)
+
 Preffered (4,5)
 
 (4,5)th steps are only require if you want to set password to your jupyter notebook else you have to manually copy the url that cointains token
+
+###############################################################  Either do this
 
 #To setup launch the docker and set the jupyter password
 
@@ -42,7 +42,7 @@ After these cmds you are free to use docker-compose cmds untill you remove the c
 in this of new cointainer it is prefered to do (4,5) th steps for seting up jupyter password
   
 
-##################################################################
+##################################################################   OR
 
 (6,7) After these you have to copy URL from cointainer 
 
