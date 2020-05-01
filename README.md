@@ -4,7 +4,10 @@ docker cointainer with availaible jupyter and python3 support
 REQUIREMENTS:
 
 docker 
+
 centos:7(cointainer image)
+
+docker-compoe
 
 STEPS:
 
