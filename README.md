@@ -20,7 +20,9 @@ docker-compose
 ## To build the image(REQUIREMENT: INTERNET)
 
 3) docker build -t <image_name:tag> .
-   eg-
+   
+   eg-  
+   
 	 docker build -t python_img:v1 .
 
 ## To run container using docker-compose, first ensure <image_name:tag> you gave to the image in 3rd step is same in docker compose else change it
