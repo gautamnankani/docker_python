@@ -24,6 +24,10 @@ docker-compose
    eg-  
    
 	 docker build -t python_img:v1 .
+	 
+	 #in case any error try running it multiple time, NOTE: running it again start the process from the point where it left earlier , this is possible because of caches it stores for every step it run
+	 
+	 #error/fail may be due to multiple reasons, it might be due to low internet speed and some other reasons but don't panic just run the same command again,
 
 ## To run container using docker-compose, first ensure <image_name:tag> you gave to the image in 3rd step is same in docker compose else change it
 
