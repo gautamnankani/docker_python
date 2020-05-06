@@ -13,21 +13,21 @@ STEPS:
 
 1) git clone https://github.com/gautamnankani/docker_python.git
 
-# go to the folder
+## go to the folder
 
 2) cd <folder_name_that you_cloned>
 
-#To build the image(REQUIREMENT: INTERNET)
+## To build the image(REQUIREMENT: INTERNET)
 
 3) docker build -t <image_name:tag> .
    eg-
 	 docker build -t python_img:v1 .
 
-#to run container using docker-compose, first ensure <image_name:tag> you gave to the image in 3rd step is same in docker compose else change it
+## to run container using docker-compose, first ensure <image_name:tag> you gave to the image in 3rd step is same in docker compose else change it
 
 4) docker-compose up -d 
 
-#To set up password for your jupyter notebook, use these 2 command only after first launch, the password will be permanently set thereafter
+## To set up password for your jupyter notebook, use these 2 command only after first launch, the password will be permanently set thereafter
 
 5) use below to commands to set a password for jupyter-notebook
   
@@ -41,7 +41,7 @@ STEPS:
 
 6) Now you can browse for "localhost:8888" at you base system browser and use the password you set in 5th step to login
 
-# if you did not set password:-
+## if you did not set password:-
 #you can still access jupyter using the url from inside the docker container
 #run docker using:  docker-compose up
 #and copy the URL from the container itself
