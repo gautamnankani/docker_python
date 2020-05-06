@@ -7,45 +7,41 @@ docker
 
 centos:7(cointainer image)
 
-docker-compoe
+docker-compose
 
 STEPS:
 
 1) git clone https://github.com/gautamnankani/docker_python.git
 
-2) go to the folder
+# go to the folder
+
+2) cd <folder_name_that you_cloned>
 
 #To build the image(REQUIREMENT: INTERNET)
 
-3) bash build.sh
+3) docker build -t <image_name:tag> .
+   eg-
+	 docker build -t python_img:v1 .
 
-EITHER FOLLOW (4,5)  OR  (6,7)
+#to run container using docker-compose, first ensure <image_name:tag> you gave to the image in 3rd step is same in docker compose else change it
 
-Preffered (4,5)
+4) docker-compose up -d 
 
-(4,5)th steps are only require if you want to set password to your jupyter notebook else you have to manually copy the url that cointains token
+#To set up password for your jupyter notebook, use these 2 command only after first launch, the password will be permanently set thereafter
 
-###############################################################  Either do this
-
-#To setup launch the docker and set the jupyter password
-
-4) open setup.sh  
-  #change the password variable to set jupyter password
-  #else the password will be "password"
- 
-5) bash setup.sh
-#######now you are good to go
-open browser in base OS and type URL(localhost:8888)
-Enter the password as discussed in 4th step
-
-After these cmds you are free to use docker-compose cmds untill you remove the cointainer and decide to launch new one
-in this of new cointainer it is prefered to do (4,5) th steps for seting up jupyter password
+5) use below to commands to set a password for jupyter-notebook
   
+  a) docker exec $(docker-compose ps -q) python3 pass.py <password_you want to set>
 
-##################################################################   OR
+  b) docker-compose restart
 
-(6,7) After these you have to copy URL from cointainer 
+  #$(docker-compose ps -q) here give the running container id you just launch, you can write manually your container_name here
+  
+  #Also note that you container must be running to set password inside it
 
-6) docker-compose up
+6) Now you can browse for "localhost:8888" at you base system browser and use the password you set in 5th step to login
 
-7) copy the url and paste it to your base system web browser
+# if you did not set password:-
+#you can still access jupyter using the url from inside the docker container
+#run docker using:  docker-compose up
+#and copy the URL from the container itself
